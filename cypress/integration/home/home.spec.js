@@ -8,4 +8,12 @@ describe("Home page", () => {
       .findByText('There are no recipes to list.')
       .should('exist')
   })
+
+  it("contains an add recipe button that when clicked opens a form", () => {
+    cy.findByRole('button').click();
+
+    cy.get('form')
+      .findByRole('button')
+      .should('exist')
+  })
 })
