@@ -63,7 +63,13 @@ class App extends React.Component {
           ? addNewRecipeForm
           : <button id="add-recipe" onClick={this.toggleAddRecipeForm}>Add Recipe</button>
         }
-        <p>There are no recipes to list.</p>
+        {
+          this.state.recipes.length > 0 ?
+          <ul>
+            <li></li>
+          </ul> :
+          <p>There are no recipes to list.</p>
+        }
       </div>
     )
   }
